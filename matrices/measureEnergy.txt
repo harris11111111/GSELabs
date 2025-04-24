@@ -36,3 +36,30 @@ Three runs performed. Fastest result recorded below:
 Compared to the C version (gcc -O0), the Fortran implementation was slower and consumed more energy.  
 This may be due to differences in how memory and loops are handled between the languages.
 
+
+
+
+
+
+
+
+
+
+
+
+
+## Fortran (ifx -O0, N=3072)
+
+Compiled using: ifx -O0  
+Executable: matrices_ifx-O0.exe  
+Machine: rasalas  
+Frobenius Norm: 2.5845874e+07
+
+Three runs performed. Fastest result recorded below:
+
+- Time (real): 6:10.72 (370.72 seconds)  
+- Energy used: 3,108,943,763 µJ = 3108.94 J
+
+Compared to GNU Fortran (`gfortran -O0`), the Intel compiler was significantly slower (370.72 s vs 278.28 s) and consumed more energy (3108.94 J vs 2326.73 J). On this hardware, **gfortran** is therefore the better choice for energy efficiency at zero optimisation.
+
+
