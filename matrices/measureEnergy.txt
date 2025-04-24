@@ -83,3 +83,24 @@ The pure-Python implementation is significantly slower and uses far more energy 
 
 
 
+
+## Python (NumPy, matrices-numpy.py)
+
+Machine: rasalas  
+Interpreter: python + NumPy  
+Script: matrices-numpy.py  
+
+### N = 512  
+- Time (real): 0.49 s  
+- Energy: 4,518,849 µJ = 4.52 J  
+- Frobenius Norm: 7.23616e+05  
+
+### N = 1024  
+- Time (real): 1.79 s  
+- Energy: 16,422,138 µJ = 16.42 J  
+- Frobenius Norm: 2.89068e+06  
+
+NumPy’s vectorised routines drastically reduced runtime and energy consumption compared to both the pure-Python version and even the compiled implementations. For example, at N=1024, NumPy completed in under 2 seconds versus over 4 minutes in pure Python.
+
+
+
