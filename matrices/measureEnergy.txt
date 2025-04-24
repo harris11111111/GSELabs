@@ -17,3 +17,22 @@ Used the readEnergy.sh wrapper script to capture energy usage via RAPL counters.
 
 Next step: compare with other machines and/or power profiles if available.
 
+
+
+
+
+## Fortran (gfortran -O0, N=3072)
+
+Compiled using: gfortran -O0  
+Executable: matrices_gfortran-O0.exe  
+Machine: rasalas  
+Frobenius Norm: 2.5845874e+07
+
+Three runs performed. Fastest result recorded below:
+
+- Time (real): 278.28 seconds  
+- Energy used: 2,326,733,606 µJ = 2,326.73 J
+
+Compared to the C version (gcc -O0), the Fortran implementation was slower and consumed more energy.  
+This may be due to differences in how memory and loops are handled between the languages.
+
