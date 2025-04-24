@@ -63,3 +63,23 @@ Three runs performed. Fastest result recorded below:
 Compared to GNU Fortran (`gfortran -O0`), the Intel compiler was significantly slower (370.72 s vs 278.28 s) and consumed more energy (3108.94 J vs 2326.73 J). On this hardware, **gfortran** is therefore the better choice for energy efficiency at zero optimisation.
 
 
+## Python (pure, matrices.py)
+
+Machine: rasalas  
+Interpreter: python (CPython)  
+Script: matrices.py  
+
+### N = 512  
+- Time (real): 25.79 s  
+- Energy: 239,833,004 µJ = 239.83 J  
+- Frobenius Norm: 7.23616e+05  
+
+### N = 1024  
+- Time (real): 3:59.91 (239.91 s)  
+- Energy: 2,184,707,969 µJ = 2184.71 J  
+- Frobenius Norm: 2.89068e+06  
+
+The pure-Python implementation is significantly slower and uses far more energy compared to the compiled C and Fortran versions.
+
+
+
