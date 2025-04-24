@@ -1,0 +1,19 @@
+## Lab04 – Default Power Profile (assumed Balanced)
+Machine: rasalas  
+CPU: Intel(R) Core(TM) i9-14900  
+Power Profile: Not detected (assumed Balanced)  
+Compiler: gcc  
+Flags: -O0  
+Executable: matrix_base_gcc-O0.exe  
+Matrix Size: 3072 x 3072  
+Frobenius Norm: 2.58459e+07
+
+Fastest run (out of 3):
+Time: 218.50 seconds  
+Energy: 1840.31 J (1840305775 µJ)
+
+Methodology:
+Used the readEnergy.sh wrapper script to capture energy usage via RAPL counters. Repeated the test 3 times and recorded the fastest result. Power governor could not be detected, assumed Balanced setting is used by default.
+
+Next step: compare with other machines and/or power profiles if available.
+
