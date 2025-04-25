@@ -102,5 +102,14 @@ Script: matrices-numpy.py
 
 NumPy’s vectorised routines drastically reduced runtime and energy consumption compared to both the pure-Python version and even the compiled implementations. For example, at N=1024, NumPy completed in under 2 seconds versus over 4 minutes in pure Python.
 
+## Machine Comparison (C -O0, N = 3072)
+
+| Machine  | Time (real) | Energy (µJ)     | Energy (J) | Frobenius Norm     |
+|----------|-------------|-----------------|------------|--------------------|
+| rasalas  | 218.06 s     | 1,819,294,598   | 1,819.29 J | 2.58459e+07        |
+| coxa     | 218.99 s     | 2,219,359,309   | 2,219.36 J | 2.58459e+07        |
+
+**Observation**:  
+Although both machines completed in a similar time, `coxa` consumed ~400 J more energy than `rasalas`. This suggests `rasalas` may be more energy-efficient, possibly due to better CPU architecture, thermal performance, or background system activity.
 
 
